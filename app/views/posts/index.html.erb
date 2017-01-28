@@ -1,0 +1,12 @@
+<h1>All Posts</h1>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.content %></td>
+    <br>
+    <% if logged_in? %>
+      <td>- <%= post.user.name %></td>
+    <% end %>
+  </tr>
+<% end %>
+
